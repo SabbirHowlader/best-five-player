@@ -39,3 +39,27 @@ document.getElementById('total-cal').addEventListener('click', function(){
 
 });
 
+function addListener(name, id) {
+    document.getElementById(id).addEventListener("click", function () {
+      addPlayer(name);
+      document.getElementById(id).classList.add("disabled");
+    });
+  }
+
+  // call function from common function
+addListener("sakib", "select");
+
+function addPlayer(playerName) {
+    const nodeList = document.querySelectorAll("ol li");
+    const nodeLength = nodeList.length;
+    if (nodeLength > 4) {
+      alert("You cannot add more than 5");
+    } else if (nodeLength <= 5) {
+      const ol = document.getElementById("select-five");
+      const li = document.createElement("li");
+      const user = document.getElementById(playerName).innerText;
+      li.innerText = user;
+      ol.appendChild(li);
+    }
+  }
+

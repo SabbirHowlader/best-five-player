@@ -20,7 +20,7 @@
         <section class="mt-8 ">
             <div class="grid grid-cols-4 ">
                 <div class=" p-8 rounded-lg">
-                    <img src="image/messi-1.jpg" alt="">
+                    <img src="image/messi-1.jpg" alt="" style="height: 300px; width: 300px;">
                     <div class="bg-black text-center text-white">
                         <h1 class="font-blod text-2xl  pt-4">Lionel Messi</h1>
                         <p class="pt-4">36 Goals . 120 Assist</p>
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class=" p-8 rounded-lg">
-                    <img src="image/ronaldo.jpg" alt="">
+                    <img src="image/ronaldo.jpg" alt="" style="height: 300px; width: 300px;">
                     <div class="bg-black text-center text-white">
                         <h1 class="font-blod text-2xl  pt-4">Ronaldo</h1>
                         <p class="pt-4">36 Goals . 120 Assist</p>
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class=" p-8 rounded-lg">
-                    <img src="image/naymar.jpg" alt="">
+                    <img src="image/naymar.jpg" alt="" style="height: 300px; width: 300px;">
                     <div class="bg-black text-center text-white">
                         <h1 class="font-blod text-2xl  pt-4">Naymer</h1>
                         <p class="pt-4">36 Goals . 120 Assist</p>
@@ -59,7 +59,7 @@
         <section>
             <div class="grid grid-cols-4 ">
                 <div class=" p-8 rounded-lg">
-                    <img src="image/images.jfif" alt="">
+                    <img src="image/images.jfif" alt="" style="height: 300px; width: 300px;">
                     <div class="bg-black text-center text-white">
                         <h1 class="font-blod text-2xl  pt-4">Turo Back</h1>
                         <p class="pt-4">36 Goals . 120 Assist</p>
@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <div class=" p-8 rounded-lg">
-                    <img src="image/paul pobago-1.jfif" alt="">
+                    <img src="image/paul pobago-1.jfif" alt="" style="height: 300px; width: 300px;">
                     <div class="bg-black text-center text-white">
                         <h1 class="font-blod text-2xl  pt-4">Paul Pobago</h1>
                         <p class="pt-4">36 Goals . 120 Assist</p>
@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <div class=" p-8 rounded-lg">
-                    <img src="image/eden hajra.jfif" alt="">
+                    <img src="image/eden hajra.jfif" alt="" style="height: 300px; width: 300px;">
                     <div class="bg-black text-center text-white">
                         <h1 class="font-blod text-2xl  pt-4">Eden Hajra</h1>
                         <p class="pt-4">36 Goals . 120 Assist</p>
@@ -83,26 +83,26 @@
                     </div>
                 </div>
                 <div class="mt-7 p-8 rounded-lg row-span-2 bg-black text-center	">
-                    <h1 class="font-blod text-xl text-center text-white">Budget</h1>
+                    <h1 class="font-blod text-xl text-center text-white mb-6">Budget</h1>
                     
-                    <div class="flex mt-4">
-                        <h3  class="text-white">Per player :</h3>
-                        <input id="per-player-field" class="w-2/4 px-4 py-3 rounded" type="text"placeholder=""  >
+                    <div>
+                        <h3  class="text-white">Per player: <input id="per-player-field" class="w-1/2 px-4 py-3 rounded font-blod" type="text"placeholder=" 1000" disabled ></h3>
+
+                        <button id="total-cal" class=" mt-4 mb-4 bg-blue-400 px-12 py-3 text-white rounded mt-4 font-medium hover:bg-sky-400 mb-6 ml-12 ">Calculate</button> 
                     </div>
 
-                    <button id="btn-calculator" class=" mt-4 mb-4 bg-blue-400 px-12 py-3 text-white rounded mt-4 font-medium hover:bg-sky-400 ">Calculator</button> 
+                  
                     <h3 class="text-white">Player Expenses : $<span id="player-exp">5000</span></h3>  
         
-                    <div class="flex mt-4">
-                        <h3 class="mt-4 text-white">Manager : </h3>
-                        <input id="manager-exp" class="w-2/4 px-4 py-3 rounded" type="text"placeholder="">
-                    </div>
-                    <div class="flex mt-4">
-                        <h3 class="mt-4 text-white">Coach : </h3>
-                        <input id="coach-exp" class="w-2/4 px-4 py-3 rounded text-black" type="text"placeholder="">
+                    <div >
+                        <h3 class="mt-4 text-white">Manager : <input id="manager-exp" class="w-2/4 px-4 py-3 rounded" type="text"placeholder=""> </h3>
                     </div>
 
-                    <button id="total-cal" class=" mt-4 mb-4 bg-blue-400 px-12 py-3 text-white rounded mt-4 font-medium hover:bg-sky-400 ">Calculator Total</button>  
+                    <div>
+                        <h3 class="mt-4 text-white">Coach : <input id="coach-exp" class="w-2/4 px-4 py-3 ml-4 rounded text-black" type="text"placeholder=""> </h3>
+                    </div>
+
+                    <button id="total-cal" class=" mt-4 mb-4 bg-blue-400 px-12 py-3 text-white rounded mt-4 font-medium hover:bg-sky-400">Calculator Total</button>  
                     <h3 class="text-white">Total : $<span>5000</span></h3> 
                      
                 </div>
