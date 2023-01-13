@@ -1,115 +1,310 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Best Five Player</title>
-    <!-- css style  -->
+    <link rel="shortcut icon" href="./images/football.svg" type="image/x-icon">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fontawesome kit link -->
+    <script src="https://kit.fontawesome.com/0a1f6c0270.js" crossorigin="anonymous"></script>
+    <!-- Site title -->
+    <title>Choose Your Favorite Five</title>
 </head>
-<body>
-    <header>
-        <section>
-            <div style="background-image:url('image/cover.jpg');" class="bg-cover h-screen	 " >
-            <h1 class="text-red-500 text-center pt-96 text-5xl font-blod ">Select My Best Five Player</h1>
-            <p class="text-white text-center font-semibold mt-6 ">we can chose here our most favoirate player. <br> You can see here top top player name in the down section. <br> so lets go. </p></div>
-        </section>
-    </header>
-    <main>
-        <section class="mt-8 ">
-            <div class="grid grid-cols-4 ">
-                <div class=" p-8 rounded-lg">
-                    <img src="image/messi-1.jpg" alt="" style="height: 300px; width: 300px;">
-                    <div class="bg-black text-center text-white">
-                        <h1 class="font-blod text-2xl  pt-4">Lionel Messi</h1>
-                        <p class="pt-4">36 Goals . 120 Assist</p>
-                        <button id="btn-add-item"  class=" mt-4 mb-4 bg-blue-400 px-8 py-1 text-white rounded mt-4 font-medium hover:bg-sky-400 ">SELECT</button>
-                    </div>
-                </div>
-                <div class=" p-8 rounded-lg">
-                    <img src="image/ronaldo.jpg" alt="" style="height: 300px; width: 300px;">
-                    <div class="bg-black text-center text-white">
-                        <h1 class="font-blod text-2xl  pt-4">Ronaldo</h1>
-                        <p class="pt-4">36 Goals . 120 Assist</p>
-                        <button  class=" mt-4 mb-4 bg-blue-400 px-8 py-1 text-white rounded mt-4 font-medium hover:bg-sky-400 ">SELECT</button>
-                    </div>
-                </div>
-                <div class=" p-8 rounded-lg">
-                    <img src="image/naymar.jpg" alt="" style="height: 300px; width: 300px;">
-                    <div class="bg-black text-center text-white">
-                        <h1 class="font-blod text-2xl  pt-4">Naymer</h1>
-                        <p class="pt-4">36 Goals . 120 Assist</p>
-                        <button  class=" mt-4 mb-4 bg-blue-400 px-8 py-1 text-white rounded mt-4 font-medium hover:bg-sky-400 ">SELECT</button>
-                    </div>
-                </div>
-                <div class=" ite p-8 rounded-lg bg-black text-white">
-                    <h2 class="font-blod text-lg mb-6">Select best V</h2>
-                    <ol id="list-container" class="list-decimal  ">
-                        <li class="item">Lional Messi</li>
-                        <li class="item">Ronaldo</li>
-                        <li class="item">Neymer</li>
-                        <li class="item">Turo Back</li>
-                        <li class="item">Poul Pobago</li>
-                        <li class="item">Eden Hajra</li>
-                    </ol>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="grid grid-cols-4 ">
-                <div class=" p-8 rounded-lg">
-                    <img src="image/images.jfif" alt="" style="height: 300px; width: 300px;">
-                    <div class="bg-black text-center text-white">
-                        <h1 class="font-blod text-2xl  pt-4">Turo Back</h1>
-                        <p class="pt-4">36 Goals . 120 Assist</p>
-                        <button  class=" mt-4 mb-4 bg-blue-400 px-8 py-1 text-white rounded mt-4 font-medium hover:bg-sky-400 ">SELECT</button>
-                    </div>
-                </div>
-                <div class=" p-8 rounded-lg">
-                    <img src="image/paul pobago-1.jfif" alt="" style="height: 300px; width: 300px;">
-                    <div class="bg-black text-center text-white">
-                        <h1 class="font-blod text-2xl  pt-4">Paul Pobago</h1>
-                        <p class="pt-4">36 Goals . 120 Assist</p>
-                        <button  class=" mt-4 mb-4 bg-blue-400 px-8 py-1 text-white rounded mt-4 font-medium hover:bg-sky-400 ">SELECT</button>
-                    </div>
-                </div>
-                <div class=" p-8 rounded-lg">
-                    <img src="image/eden hajra.jfif" alt="" style="height: 300px; width: 300px;">
-                    <div class="bg-black text-center text-white">
-                        <h1 class="font-blod text-2xl  pt-4">Eden Hajra</h1>
-                        <p class="pt-4">36 Goals . 120 Assist</p>
-                        <button  class=" mt-4 mb-4 bg-blue-400 px-8 py-1 text-white rounded mt-4 font-medium hover:bg-sky-400 ">SELECT</button>
-                    </div>
-                </div>
-                <div class="mt-7 p-8 rounded-lg row-span-2 bg-black text-center	">
-                    <h1 class="font-blod text-xl text-center text-white mb-6">Budget</h1>
-                    
-                    <div>
-                        <h3  class="text-white">Per player: <input id="per-player-field" class="w-1/2 px-4 py-3 rounded font-blod" type="text"placeholder=" 1000" disabled ></h3>
 
-                        <button id="total-cal" class=" mt-4 mb-4 bg-blue-400 px-12 py-3 text-white rounded mt-4 font-medium hover:bg-sky-400 mb-6 ml-12 ">Calculate</button> 
-                    </div>
+<body class="overflow-x-hidden">
+    <!-- Header part start -->
+    <header class="w-screen h-auto lg:h-96 bg-black text-white flex justify-center items-center text-center relative">
+        <div class="w-full md:w-1/2 lg:w-1/2">
+            <h1 class="text-6xl text-orange-600 header-font mb-10 mt-5">Choose Your Favorite Five</h1>
+            <p class="text-base pb-5">A football player or footballer is a sportsperson who plays one of the different
+                types
+                of football. The
+                main types of
+                football are association football, American football, Canadian football, Australian rules football,
+                Gaelic football,
+                rugby league and rugby union.</p>
+        </div>
 
-                  
-                    <h3 class="text-white">Player Expenses : $<span id="player-exp">5000</span></h3>  
         
-                    <div >
-                        <h3 class="mt-4 text-white">Manager : <input id="manager-exp" class="w-2/4 px-4 py-3 rounded" type="text"placeholder=""> </h3>
-                    </div>
+    </header>
+    <!-- Header part end -->
 
-                    <div>
-                        <h3 class="mt-4 text-white">Coach : <input id="coach-exp" class="w-2/4 px-4 py-3 ml-4 rounded text-black" type="text"placeholder=""> </h3>
+    <!-- Main part with player card and JS card start -->
+    <main class="w-full md:w-full lg:w-3/4 mx-auto flex flex-col md:flex-col lg:flex-row gap-x-4 p-5">
+        <!-- Six player cards -->
+        <div class="w-full md:w-full lg:w-3/4 my-10">
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
+                <!-- Player Card 1 -->
+                <div
+                    class="card card-compact bg-black shadow-xl rounded-none border border-transparent hover:border-gray-400">
+                    <figure><img src="./images/messi.png" alt="Messi" class="w-full" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title justify-center text-2xl text-slate-200">Lionel Messi</h2>
+                        <p class="text-center text-lg text-gray-400">36 Goals <i class="fa-solid fa-circle"></i> 120
+                            Assist
+                        </p>
+                        <div class="card-actions justify-center mt-5">
+                            <button class="btn btn-primary rounded-none w-full text-base text-gray-300"
+                                onclick="playerSelection(this)">Select</button>
+                        </div>
                     </div>
-
-                    <button id="total-cal" class=" mt-4 mb-4 bg-blue-400 px-12 py-3 text-white rounded mt-4 font-medium hover:bg-sky-400">Calculator Total</button>  
-                    <h3 class="text-white">Total : $<span>5000</span></h3> 
-                     
+                </div>
+                <!-- Player Card 2 -->
+                <div
+                    class="card card-compact bg-black shadow-xl rounded-none border border-transparent hover:border-gray-400">
+                    <figure><img src="./images/neymar.png" alt="neymar" class="w-full" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title justify-center text-2xl text-slate-200">Neymar Jr</h2>
+                        <p class="text-center text-lg text-gray-400">36 Goals <i class="fa-solid fa-circle"></i> 120
+                            Assist
+                        </p>
+                        <div class="card-actions justify-center mt-5">
+                            <button class="btn btn-primary rounded-none w-full text-base text-gray-300"
+                                onclick="playerSelection(this)">Select</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player Card 3 -->
+                <div
+                    class="card card-compact bg-black shadow-xl rounded-none border border-transparent hover:border-gray-400">
+                    <figure><img src="./images/mbappe.png" alt="kylian" class="w-full" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title justify-center text-2xl text-slate-200">Kylian Mbappé</h2>
+                        <p class="text-center text-lg text-gray-400">36 Goals <i class="fa-solid fa-circle"></i> 120
+                            Assist
+                        </p>
+                        <div class="card-actions justify-center mt-5">
+                            <button class="btn btn-primary rounded-none w-full text-base text-gray-300"
+                                onclick="playerSelection(this)">Select</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player Card 4 -->
+                <div
+                    class="card card-compact bg-black shadow-xl rounded-none border border-transparent hover:border-gray-400">
+                    <figure><img src="./images/machado.jpg" alt="vitor" class="w-full" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title justify-center text-2xl text-slate-200">Vítor Machado</h2>
+                        <p class="text-center text-lg text-gray-400">36 Goals <i class="fa-solid fa-circle"></i> 120
+                            Assist
+                        </p>
+                        <div class="card-actions justify-center mt-5">
+                            <button class="btn btn-primary rounded-none w-full text-base text-gray-300"
+                                onclick="playerSelection(this)">Select</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player Card 5 -->
+                <div
+                    class="card card-compact bg-black shadow-xl rounded-none border border-transparent hover:border-gray-400">
+                    <figure><img src="./images/sergio.png" alt="sergio" class="w-full" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title justify-center text-2xl text-slate-200">Sergio Ramos</h2>
+                        <p class="text-center text-lg text-gray-400">36 Goals <i class="fa-solid fa-circle"></i> 120
+                            Assist
+                        </p>
+                        <div class="card-actions justify-center mt-5">
+                            <button class="btn btn-primary rounded-none w-full text-base text-gray-300"
+                                onclick="playerSelection(this)">Select</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player Card 6 -->
+                <div
+                    class="card card-compact bg-black shadow-xl rounded-none border border-transparent hover:border-gray-400">
+                    <figure><img src="./images/renato.png" alt="renato" class="w-full" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title justify-center text-2xl text-slate-200">Renato Sanches</h2>
+                        <p class="text-center text-lg text-gray-400">36 Goals <i class="fa-solid fa-circle"></i> 120
+                            Assist
+                        </p>
+                        <div class="card-actions justify-center mt-5">
+                            <button class="btn btn-primary rounded-none w-full text-base text-gray-300"
+                                onclick="playerSelection(this)">Select</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
 
-    <script src="js/calculate.js"></script>
+        <!-- Two JS cards -->
+        <div class="w-full md:w-full lg:w-1/4 my-10">
+            <div class="grid grid-cols-1 gap-4">
+                <!-- Card 1 -->
+                <div
+                    class="card card-compact bg-black shadow-xl rounded-none border border-transparent hover:border-gray-400">
+
+                    <div class="card-body card-height">
+                        <h2 class="card-title justify-center text-2xl text-slate-200">Favorite Five</h2>
+                        <div class="flex justify-center">
+                            <img src="./images/line-marker-orange.png" alt="" class="w-40">
+                        </div>
+                        <ol class="list-decimal ml-14 text-lg text-white my-4 leading-relaxed">
+
+                        </ol>
+
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="card card-compact bg-black shadow-xl rounded-none border border-transparent hover:border-gray-400">
+                    <div class="card-body">
+                        <h2 class="card-title justify-center text-2xl text-slate-200">Budget</h2>
+                        <div class="flex justify-center">
+                            <img src="./images/line-marker-orange.png" alt="" class="w-40">
+                        </div>
+                        <div class="grid grid-cols-2 w-full">
+                            <div class="w-full text-white text-lg">Per Player</div>
+                            <div class="w-full"><input type="text" name="per-player-cost" id="per-player-cost"
+                                    class="w-full text-lg border px-1 text-white border-white bg-black outline-none">
+                            </div>
+                        </div>
+
+                        <div class="card-actions justify-center my-4">
+                            <button class="btn btn-primary rounded-none w-full text-base text-gray-300"
+                                id="calculate-btn">Calculate</button>
+                        </div>
+                        <div class="flex justify-between w-full">
+                            <div class="text-white text-lg">Player Expenses</div>
+                            <div class="text-white text-lg">$<span id="player-expenses">0000</span></div>
+                        </div>
+
+                        <div class="grid grid-cols-2 w-full">
+                            <div class="w-full text-white text-lg">Manager</div>
+                            <div class="w-full"><input type="text" name="manager-cost" id="manager-cost"
+                                    class="w-full text-lg border px-1 text-white border-white bg-black outline-none">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 w-full">
+                            <div class="w-full text-white text-lg">Coach</div>
+                            <div class="w-full"><input type="text" name="coach-cost" id="coach-cost"
+                                    class="w-full text-lg border px-1 text-white border-white bg-black outline-none">
+                            </div>
+                        </div>
+                        <div class="card-actions justify-center my-4">
+                            <button class="btn btn-primary rounded-none w-full text-base text-gray-300"
+                                id="total-btn">Calculate
+                                Total</button>
+                        </div>
+                        <div class="flex justify-between w-full">
+                            <div class="text-white text-lg">Total</div>
+                            <div class="text-lg text-orange-700 font-bold">$<span id="total-cost">0000</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main part with player card and JS card end -->
+
+    <!-- Footer part start-->
+    <footer class="footer p-10 bg-black text-white grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+        <div>
+            <span class="footer-title">Services</span>
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+        </div>
+        <div>
+            <span class="footer-title">Company</span>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+        </div>
+        <div>
+            <span class="footer-title">Social</span>
+            <div class="grid grid-flow-col gap-4">
+                <a><i class="fa-brands fa-square-facebook social"></i></a>
+                <a><i class="fa-brands fa-square-twitter social"></i></a>
+                <a><i class="fa-brands fa-linkedin social"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer part end-->
+
+    <!-- External .js file included -->
+   <script>
+    function playerSelection(event) {
+    const playerName = event.parentElement.parentElement.firstElementChild.textContent;
+    const liQuantity = document.querySelector('ol').childElementCount;
+
+    if(liQuantity < 5) {
+        const ol = document.querySelector('ol');
+        const li = document.createElement('li');
+        li.textContent = playerName;
+        ol.appendChild(li);
+        event.classList.add('btn-disabled');
+    } else {
+        alert('Sorry, You can select only five players.');
+    }
+}
+
+// Collect data from input field and convert that into number type value.
+function getInputValue(inputId) {
+    return Number(document.getElementById(inputId).value);
+}
+
+// Collect data from text field and convert that into number type value.
+function getDataElement(elementId) {
+    return Number(document.getElementById(elementId).textContent);
+}
+
+// Set text context into specific element field
+function setTextContent(elementId, value) {
+    document.getElementById(elementId).textContent = value;
+}
+
+//calculaor
+document.getElementById('calculate-btn').addEventListener('click', function() {
+    const perPlayerCost = getInputValue('per-player-cost');
+    const liQuantity = document.querySelector('ol').childElementCount;
+
+    // Validation Start
+    if(isNaN(perPlayerCost)) {
+        alert('Please, Enter a valid number amount.');
+        return;
+    }
+    if(perPlayerCost <= 0) {
+        alert('Please, Enter some amount.');
+        return;
+    }
+    if(liQuantity < 1) {
+        alert('Favorite player list is empty. Please, select some players.');
+        return;
+    }
+    // Validation End
+
+    const selectedPlayer = document.querySelector('ol').childElementCount;
+    const playerExpenses = perPlayerCost * selectedPlayer;
+
+    setTextContent('player-expenses', playerExpenses);
+});
+
+// Using an event listener to 'Calculate Total' button with validation
+document.getElementById('total-btn').addEventListener('click', function() {
+    const playerExpenses = getDataElement('player-expenses');
+    const managerCost = getInputValue('manager-cost');
+    const coachCost = getInputValue('coach-cost');
+
+    // Validation Start
+    if(isNaN(managerCost) || isNaN(coachCost)) {
+        alert('Please, Enter valid number amount.');
+        return;
+    }
+    if(managerCost <= 0 || coachCost <= 0) {
+        alert('Please, Enter some amount.');
+        return;
+    }
+    // Validation End
+
+    const totalCost = playerExpenses + managerCost + coachCost;
+    setTextContent('total-cost', totalCost);
+});
+   </script>
 </body>
+
 </html>
